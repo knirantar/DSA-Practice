@@ -1,15 +1,12 @@
 package Trees;
 
 import java.util.ArrayList;
-import java.util.LinkedHashMap;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.Queue;
 import java.util.Stack;
 import java.util.TreeMap;
-
-import javax.swing.tree.TreeNode;
 
 class Node {
     int data;
@@ -55,14 +52,33 @@ public class BinaryTree {
         root1.right = new Node(5);
         root1.right.left = new Node(1);
         root1.right.right = new Node(4);
-        Node head = binaryTreeToDLL(root);
-        Node current = head;
-        while (current != null) {
-            System.out.print(current.data + " ");
-            current = current.right;
-        }
-        System.out.println();
 
+    }
+
+    // Same can be done for for Post order and inorder - need to traverse post order
+    // from back
+    private static Node buildTreeFromPreIn(List<Integer> pre, List<Integer> in, int[] start, int instart, int inend) {
+        if (inend < instart) {
+            return null;
+        }
+        Node root = new Node(pre.get(start[0]));
+        int mid = search(in, instart, inend, pre.get(start[0]));
+        start[0]++;
+        // System.out.println(mid);
+
+        root.left = buildTreeFromPreIn(pre, in, start, instart, mid - 1);
+        root.right = buildTreeFromPreIn(pre, in, start, mid + 1, inend);
+
+        return root;
+    }
+
+    private static int search(List<Integer> in, int instart, int inend, Integer key) {
+        for (int i = instart; i <= inend; i++) {
+            if (in.get(i).equals(key)) {
+                return i;
+            }
+        }
+        return -1; // Key not found
     }
 
     private static Node binaryTreeToDLL(Node root) {
