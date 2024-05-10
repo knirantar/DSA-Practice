@@ -1,6 +1,7 @@
 package Trees;
 
 import java.util.ArrayList;
+
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
@@ -52,6 +53,8 @@ public class BinaryTree {
         root1.right = new Node(5);
         root1.right.left = new Node(1);
         root1.right.right = new Node(4);
+
+        printLeafNodes(root);
 
     }
 
@@ -719,4 +722,14 @@ public class BinaryTree {
         return 1 + Math.max(lh, rh);
     }
 
+    private static void printLeafNodes(Node root) {
+        if (root == null)
+            return;
+
+        if (root.left == null && root.right == null) {
+            System.out.println(root.data);
+        }
+        printLeafNodes(root.left);
+        printLeafNodes(root.right);
+    }
 }

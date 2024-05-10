@@ -21,20 +21,17 @@ class Node {
 
 public class BinarySearchTree {
     public static void main(String[] args) {
-        // Node root = new Node(100);
-        // root.left = new Node(80);
-        // root.left.left = new Node(60);
-        // root.left.right = new Node(90);
-        // root.right = new Node(120);
-        // root.right.left = new Node(110);
-        // root.right.right = new Node(130);
+        Node root = new Node(100);
+        root.left = new Node(80);
+        root.left.left = new Node(60);
+        root.left.right = new Node(90);
+        root.right = new Node(120);
+        root.right.left = new Node(110);
+        root.right.right = new Node(130);
 
-        Node root = new Node(17);
-        root.left = new Node(51);
-        root.right = new Node(7);
-
-        binaryTreeToBST(root);
-
+        int[] arr = new int[] { 4, 10, 12, 15, 28, 202 };
+        Node root1 = constructBSTFromArray(arr, 0, arr.length - 1);
+        inOrderTraversal(root1);
     }
 
     public static void inOrderTraversal(Node root) {
@@ -163,6 +160,41 @@ public class BinarySearchTree {
         retrieve(root.left, li);
         li.add(root.data);
         retrieve(root.right, li);
+    }
+
+    private static Boolean checkIfBST(Node root) {
+        List<Integer> li = new ArrayList<>();
+        inorderTraversalWithList(root, li);
+        int j = 0;
+        while (j < li.size() - 1) {
+            if (li.get(j) > li.get(j + 1)) {
+                return false;
+            }
+            j++;
+        }
+        return true;
+
+    }
+
+    private static void inorderTraversalWithList(Node root, List<Integer> li) {
+        if (root == null)
+            return;
+
+        inorderTraversalWithList(root.left, li);
+        li.add(root.data);
+        inorderTraversalWithList(root.right, li);
+    }
+
+    private static Node constructBSTFromArray(int[] arr, int l, int r) {
+        if (l > r)
+            return null;
+
+        int mid = (l + r) / 2;
+        Node root = new Node(arr[mid]);
+        root.left = constructBSTFromArray(arr, l, mid - 1);
+        root.right = constructBSTFromArray(arr, mid + 1, r);
+        return root;
+
     }
 
 }
