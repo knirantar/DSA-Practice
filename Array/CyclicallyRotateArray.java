@@ -5,7 +5,7 @@ public class CyclicallyRotateArray {
     public static void main(String[] args) {
         int[] arr = new int[] { 12, 3, 5, 7, 19, 23 };
         int k = 3;
-        rotateArray(arr, 3);
+        rotateArray(arr, k);
         for (int i = 0; i < arr.length; i++) {
             System.out.println(arr[i]);
         }
