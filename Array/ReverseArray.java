@@ -4,7 +4,7 @@
  */
 package Array;
 
-public class Array2 {
+public class ReverseArray {
     public static void main(String[] args) {
         int[] arr = new int[] { 22, 223, 5, 6, 7 };
         int[] result = reverseArray(arr);
