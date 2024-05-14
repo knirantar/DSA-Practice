@@ -2,7 +2,6 @@ package Array;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
-import java.util.concurrent.LinkedBlockingDeque;
 
 public class FindDuplicateInArray {
     public static void main(String[] args) {
