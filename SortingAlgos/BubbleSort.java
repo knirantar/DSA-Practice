@@ -1,9 +1,9 @@
 /*
  * Sort the array using bubble sort
  */
-package Array;
+package SortingAlgos;
 
-public class Array10 {
+public class BubbleSort {
     public static void main(String[] args) {
         int[] arr = new int[] { 100, 10, 23, 14, 12, 9 };
         bubbleSort(arr);

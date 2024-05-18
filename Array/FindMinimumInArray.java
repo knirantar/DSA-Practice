@@ -3,7 +3,7 @@
  */
 package Array;
 
-public class Array3 {
+public class FindMinimumInArray {
     public static void main(String[] args) {
         int[] arr = new int[] { 2, 5, 1, 6, 4, 7, -3 };
 

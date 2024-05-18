@@ -4,7 +4,7 @@
  */
 package Array;
 
-public class Array5 {
+public class MoveZerosToEnd {
     public static void main(String[] args) {
         int arr[] = new int[] { 0, 1, 0, 4, 12, 0, 0, 7, 79, 0, 0, 0 };
         int[] result = moveZerosToEnd(arr);

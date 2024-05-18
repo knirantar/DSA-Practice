@@ -1,9 +1,9 @@
 /*
  * Sort the array using merge sort
  */
-package Array;
+package SortingAlgos;
 
-public class Array12 {
+public class MergeSort {
     public static void main(String[] args) {
         int[] arr = new int[] { 100, 10, 23, 14, 12, 9 };
         int n = arr.length;

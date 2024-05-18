@@ -1,9 +1,9 @@
 /*
  * Sort the array using insertion sort
  */
-package Array;
+package SortingAlgos;
 
-public class Array11 {
+public class InsertionSort {
     public static void main(String[] args) {
         int[] arr = new int[] { 100, 10, 23, 14, 12, 9 };
 

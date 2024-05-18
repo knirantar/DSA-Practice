@@ -3,7 +3,7 @@
  */
 package Array;
 
-public class Array7 {
+public class FindIfPallindrome {
     public static void main(String[] args) {
         String s = "nirrin";
         System.out.println(isPallindrome(s));

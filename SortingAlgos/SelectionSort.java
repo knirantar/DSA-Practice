@@ -1,9 +1,9 @@
 /*
  * Sort the array using Selection Sort
  */
-package Array;
+package SortingAlgos;
 
-public class Array9 {
+public class SelectionSort {
     public static void main(String[] args) {
         int[] arr = new int[] { 100, 10, 23, 14, 12, 9 };
         int[] result = selectionSort(arr);

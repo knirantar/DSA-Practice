@@ -4,9 +4,9 @@
  * Smaller on the left and Larger on the right
  * 
  */
-package Array;
+package SortingAlgos;
 
-public class Array13 {
+public class QuickSort {
     public static void main(String[] args) {
         int[] arr = new int[] { 4, 6, 2, 5, 7, 9, 1, 3 };
         int n = arr.length;

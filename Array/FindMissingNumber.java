@@ -5,7 +5,7 @@
  */
 package Array;
 
-public class Array6 {
+public class FindMissingNumber {
     public static void main(String[] args) {
         int[] arr = new int[] { 2, 4, 10, 5, 9, 8, 6, 3, 7 };
         System.out.println(findMissingNumber(arr));

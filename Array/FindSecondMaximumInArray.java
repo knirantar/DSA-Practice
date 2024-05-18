@@ -3,7 +3,7 @@
  */
 package Array;
 
-public class Array4 {
+public class FindSecondMaximumInArray {
     public static void main(String[] args) {
         int[] arr = new int[] {
                 -1, 3, 55, 66, 5, 6, 43, 21, 433, 68

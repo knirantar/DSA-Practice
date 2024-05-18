@@ -4,11 +4,10 @@ public class AlternateSignNumbers {
     public static void main(String[] args) {
         int[] a = new int[] { 9, 4, -2, -1, 5, 0, -5, -3, 2 };
         makeAlternatePositiveAndNegative(a);
-        
+
     }
 
     private static void makeAlternatePositiveAndNegative(int[] a) {
-        int n = a.length;
         int[] ans = new int[a.length];
         int pos = 0;
         int neg = 1;

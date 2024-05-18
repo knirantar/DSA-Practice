@@ -5,7 +5,7 @@
 
 package Array;
 
-class Array1 {
+class RemoveEvenNumbers {
 
     public static void main(String ags[]) {
         int arr[] = new int[] {
