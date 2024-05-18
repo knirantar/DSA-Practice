@@ -18,10 +18,11 @@ public class CombinationSum {
         }
     }
 
-    private static void findCombinations(int i, int[] a, int target, List<List<Integer>> ans, ArrayList arrayList) {
+    private static void findCombinations(int i, int[] a, int target, List<List<Integer>> ans,
+            ArrayList<Integer> arrayList) {
         if (i == a.length) {
             if (target == 0) {
-                ans.add(new ArrayList<>(arrayList));
+                ans.add(new ArrayList<Integer>(arrayList));
             }
             return;
         }
