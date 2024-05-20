@@ -1,59 +1,62 @@
 package Array;
 
-import StackAndQueue.Stack;
+import java.util.Stack;
 
 public class LargestRectangularAreaHistogram {
     public static void main(String[] args) {
         int a[] = new int[] { 4, 2, 1, 5, 6, 3, 2, 4, 2 };
-        findLargestRectangleArea(a);
-
+        System.out.println(findLargestRectangleArea(a)); // Expected output: 8
     }
 
     private static int[] nextSmaller(int[] a) {
-        Stack s = new Stack();
-        int[] c = new int[a.length];
-        for (int i = a.length - 1; i >= 0; i--) {
-            if (s.isEmpty()) {
-                c[i] = -1;
-
-            } else {
-                while (!s.isEmpty() && a[i] <= s.top()) {
-                    s.pop();
-                }
-                if (!s.isEmpty()) {
-                    c[i] = s.top();
-                } else {
-                    c[i] = -1;
-                }
+        int n = a.length;
+        int[] c = new int[n];
+        Stack<Integer> stack = new Stack<>();
+        for (int i = 0; i < n; i++) {
+            c[i] = n;
+        }
+        for (int i = n - 1; i >= 0; i--) {
+            while (!stack.isEmpty() && a[stack.peek()] >= a[i]) {
+                stack.pop();
             }
-            s.push(a[i]);
+            if (!stack.isEmpty()) {
+                c[i] = stack.peek();
+            }
+            stack.push(i);
         }
         return c;
     }
 
     private static int[] prevSmaller(int[] a) {
-        Stack s = new Stack();
-        int[] b = new int[a.length];
-        for (int i = 0; i < a.length; i++) {
-            if (s.isEmpty()) {
-                b[i] = -1;
-            } else {
-                while (!s.isEmpty() && s.top() >= a[i]) {
-                    s.pop();
-                }
-                if (!s.isEmpty()) {
-                    b[i] = s.top();
-                } else {
-                    b[i] = -1;
-                }
+        int n = a.length;
+        int[] b = new int[n];
+        Stack<Integer> stack = new Stack<>();
+        for (int i = 0; i < n; i++) {
+            b[i] = -1;
+        }
+        for (int i = 0; i < n; i++) {
+            while (!stack.isEmpty() && a[stack.peek()] >= a[i]) {
+                stack.pop();
             }
-            s.push(a[i]);
+            if (!stack.isEmpty()) {
+                b[i] = stack.peek();
+            }
+            stack.push(i);
         }
         return b;
     }
 
-    private static void findLargestRectangleArea(int[] a) {
+    private static int findLargestRectangleArea(int[] a) {
+        int n = a.length;
+        int[] ps = prevSmaller(a);
+        int[] ns = nextSmaller(a);
+        int maxArea = 0;
 
+        for (int i = 0; i < n; i++) {
+            int width = ns[i] - ps[i] - 1;
+            int area = width * a[i];
+            maxArea = Math.max(maxArea, area);
+        }
+        return maxArea;
     }
-
 }
