@@ -9,7 +9,7 @@ public class MoveZerosToEnd {
         int arr[] = new int[] { 0, 1, 0, 4, 12, 0, 0, 7, 79, 0, 0, 0 };
         int[] result = moveZerosToEnd(arr);
         for (int i = 0; i < result.length; i++) {
-            System.out.println(result[i]);
+            System.out.print(result[i] + " ");
         }
     }
 
