@@ -34,8 +34,8 @@ public class BreadthFirstSearchTraversal {
         boolean[] vis = new boolean[V];
         Queue<Integer> q = new LinkedList<>();
 
-        q.add(1);
-        vis[1] = true;
+        q.add(0);
+        vis[0] = true;
 
         while (!q.isEmpty()) {
             int node = q.poll();
