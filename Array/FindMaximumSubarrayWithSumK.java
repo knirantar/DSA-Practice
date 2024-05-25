@@ -5,10 +5,10 @@ import java.util.Map;
 
 public class FindMaximumSubarrayWithSumK {
     public static void main(String[] args) {
-        int[] a = new int[] { 10, 5, 2, 7, 1, 9 };
-        int k = 10;
+        int[] a = new int[] { -13, -9, 16, 10, 19, 15, 5, 17, 10, 5, 6 };
+        int k = 4;
 
-        findMaxSubarrayWithSumKTwoPointers(a, k);
+        findMaxSubarrayWithSumK(a, k);
     }
 
     private static void findMaxSubarrayWithSumK(int[] a, int k) {
@@ -17,13 +17,11 @@ public class FindMaximumSubarrayWithSumK {
         Map<Integer, Integer> map = new HashMap<>();
         map.put(0, -1);
         for (int i = 0; i < a.length; i++) {
-            if (prefixSum == k) {
-                lsubarray = Math.max(lsubarray, i + 1);
-            }
             prefixSum = prefixSum + a[i];
-            int rem = prefixSum - k;
-            if (map.containsKey(rem)) {
-                lsubarray = Math.max(lsubarray, i - map.get(rem));
+            if (prefixSum == k) {
+                lsubarray = i + 1;
+            } else if (map.containsKey(prefixSum - k)) {
+                lsubarray = Math.max(lsubarray, i - map.get(prefixSum - k));
             }
             if (!map.containsKey(prefixSum)) {
                 map.put(prefixSum, i);
