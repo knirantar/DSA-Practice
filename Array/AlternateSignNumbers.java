@@ -2,7 +2,7 @@ package Array;
 
 public class AlternateSignNumbers {
     public static void main(String[] args) {
-        int[] a = new int[] { 9, 4, -2, -1, 5, 0, -5, -3, 2 };
+        int[] a = new int[] { 9, -4, -2, -1, 5, 0, -5, -3, 2 };
         makeAlternatePositiveAndNegative(a);
 
     }
