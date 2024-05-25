@@ -1,9 +1,10 @@
 package Array;
 
 //Kadanes algorithm
+// Maximum subarray sum
 public class MaxSumContiguousArray {
     public static void main(String[] args) {
-        int[] arr = new int[] { -1, -2, -3, -4 };
+        int[] arr = new int[] { -1, 4, -3, 14 };
         int res = maxContinuouArraySum(arr);
         System.out.println(res);
 

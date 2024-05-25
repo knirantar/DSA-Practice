@@ -7,12 +7,12 @@ public class TwoSum {
     public static void main(String[] args) {
         int[] a = new int[] { 7, 6, 4, 3, 1 };
 
-        Map<Integer, Integer> res = TwoSum(a, 10);
+        Map<Integer, Integer> res = twoSum(a, 10);
         System.out.println(res);
 
     }
 
-    private static Map<Integer, Integer> TwoSum(int[] a, int k) {
+    private static Map<Integer, Integer> twoSum(int[] a, int k) {
         Map<Integer, Integer> map = new HashMap<>();
         Map<Integer, Integer> ans = new HashMap<>();
 
