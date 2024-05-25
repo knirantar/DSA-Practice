@@ -16,7 +16,7 @@ public class FrogJump {
     }
 
     private static void findMinimumEnergy(int[] a, int n) {
-        if()
+
     }
 
 }
