@@ -3,7 +3,7 @@ package Array;
 public class MaximumProductSubarray {
 
     public static void main(String[] args) {
-        int[] arr = new int[] { 2, 3, -4, 5, 9, -1, 0, -9, 22 };
+        int[] arr = new int[] { -2, 0, -1 };
         int res = maxContinuouArrayProduct(arr);
         System.out.println(res);
 
@@ -25,16 +25,17 @@ public class MaximumProductSubarray {
             pre = pre * arr[i];
             suff = suff * arr[n - i - 1];
 
-            if (pre == 0)
-                pre = 1;
-            if (suff == 0)
-                suff = 1;
             if (pre > maxProd) {
                 maxProd = pre;
             }
             if (suff > maxProd) {
                 maxProd = suff;
             }
+            if (pre == 0)
+                pre = 1;
+            if (suff == 0)
+                suff = 1;
+
         }
 
         return maxProd;
