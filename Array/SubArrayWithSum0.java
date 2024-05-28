@@ -5,7 +5,7 @@ import java.util.Map;
 
 public class SubArrayWithSum0 {
     public static void main(String[] args) {
-        int[] a = new int[] { 4,2,0,1,6 };
+        int[] a = new int[] { -4,6,10,1,16 };
         System.out.println(sumZeroSubarray(a));
     }
 
