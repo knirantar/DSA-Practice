@@ -2,11 +2,13 @@ package Array;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 public class ThreeSum {
     public static void main(String[] args) {
-        int[] a = new int[] { -1, 0, 1, 2, -1, -4 };
+        int[] a = new int[] { -2, 0, 0, 2, 2 };
         Arrays.sort(a);
         findTriplets(a);
     }
@@ -33,6 +35,9 @@ public class ThreeSum {
                 }
             }
         }
+        Set<List<Integer>> set = new HashSet<>(ans);
+        ans.clear();
+        ans.addAll(set);
         System.out.println(ans);
     }
 

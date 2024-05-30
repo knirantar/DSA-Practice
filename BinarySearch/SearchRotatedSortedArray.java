@@ -7,9 +7,9 @@ package BinarySearch;
 
 public class SearchRotatedSortedArray {
     public static void main(String[] args) {
-        int[] arr = new int[] { 26, 43, 87, 3, 5, 7, 12, 21 };
+        int[] arr = new int[] { 4, 5, 6, 7, 0, 1, 2 };
         int n = arr.length;
-        int x = 5;
+        int x = 0;
         int idx = searchRoatetedSortedArray(arr, 0, n - 1, x);
         System.out.println(idx);
     }
