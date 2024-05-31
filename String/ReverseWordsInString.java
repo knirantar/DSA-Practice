@@ -1,8 +1,11 @@
 package String;
 
+/*
+ * Given a string s, reverse the words of the string.
+ */
 public class ReverseWordsInString {
     public static void main(String[] args) {
-        String s = "this is an amazing program";
+        String s = "  hello world  ";
 
         reverseWords(s);
     }
@@ -22,7 +25,7 @@ public class ReverseWordsInString {
                 ans = ans.concat(" " + s.substring(i + 1, j + 1));
             }
         }
-        System.out.println(ans);
+        System.out.println(ans.trim);
     }
 
 }
