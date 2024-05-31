@@ -2,19 +2,21 @@ package String;
 
 public class CheckIfRotatedString {
     public static void main(String[] args) {
-        String a = "abcde";
-        String goal = "cdeab";
-        ifRotated(a, goal);
+        String a = "bbbacddceeb";
+        String goal = "ceebbbbacdd";
+        System.out.println(ifRotated(a, goal));
     }
 
     private static Boolean ifRotated(String a, String goal) {
-        if (a.length() == 0 || a.length() == 0)
+
+        if (a.length() != goal.length())
+            return false;
+
+        String temp = a + a;
+        if (temp.contains(goal)) {
             return true;
-
-        Character c = a.charAt(0);
-
-        for (int i = 0; i < goal.length(); i++) {
-
+        } else {
+            return false;
         }
     }
 
