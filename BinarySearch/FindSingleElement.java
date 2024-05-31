@@ -7,7 +7,7 @@ package BinarySearch;
 public class FindSingleElement {
     public static void main(String[] args) {
 
-        int[] arr = new int[] { 1, 1, 2, 2, 3, 4, 4, 5, 5, 6, 6 };
+        int[] arr = new int[] { 1, 1, 2, 2, 3, 3, 4, 5, 5, 6, 6 };
         int n = arr.length - 1;
         int elem = findSingleElement(arr, n);
         System.out.println(elem);
