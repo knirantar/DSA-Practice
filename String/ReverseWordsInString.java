@@ -25,7 +25,7 @@ public class ReverseWordsInString {
                 ans = ans.concat(" " + s.substring(i + 1, j + 1));
             }
         }
-        System.out.println(ans.trim);
+        System.out.println(ans.trim());
     }
 
 }
