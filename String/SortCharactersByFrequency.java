@@ -24,9 +24,8 @@ public class SortCharactersByFrequency {
         for (int i = 0; i < a.length(); i++) {
             Character ch = a.charAt(i);
             map.put(ch, map.getOrDefault(ch, 0) + 1);
-
         }
-        List<Character> li = new ArrayList(map.keySet());
+        List<Character> li = new ArrayList<Character>(map.keySet());
         li.sort((ob1, ob2) -> map.get(ob2) - map.get(ob1));
 
         for (Character c : li) {
