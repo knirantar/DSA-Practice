@@ -7,21 +7,27 @@ public class FindNumberOfHomogenousSubstrings {
     }
 
     private static void findHomogenousSubstring(String s) {
+        final int MOD = 1000000007;
+        long totalCount = 0;
+        int length = s.length();
         int i = 0;
-        int j = 1;
-        int count = 0;
-        while (j < s.length()) {
-            if (s.charAt(j) == s.charAt(i)) {
-                j++;
-                if (j - i > 1) {
-                    count++;
-                }
-            } else {
+
+        while (i < length) {
+            char currentChar = s.charAt(i);
+            int count = 0;
+
+            // Count the length of the current homogenous segment
+            while (i < length && s.charAt(i) == currentChar) {
+                count++;
                 i++;
             }
+
+            // Number of homogenous substrings in this segment
+            totalCount += (long) count * (count + 1) / 2;
+            totalCount %= MOD;
         }
-        count = count + s.length();
-        System.out.println(count);
+
+        System.out.println((int) totalCount);
     }
 
 }
