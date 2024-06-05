@@ -1,5 +1,9 @@
 package LinkedList;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
 class Node {
     int data;
     Node next;
@@ -657,4 +661,23 @@ public class LinkedList {
         return dummyNode.next;
     }
 
+    public static Node sortLinkedList(Node head) {
+        Node temp = head;
+        List<Integer> li = new ArrayList<Integer>();
+        while (temp != null) {
+            li.add(temp.data);
+            temp = temp.next;
+        }
+        Collections.sort(li);
+        if (li.isEmpty()) {
+            return null;
+        }
+        head = new Node(li.get(0), null);
+        temp = head;
+        for (int i = 1; i < li.size(); i++) {
+            temp.next = new Node(li.get(i), null);
+            temp = temp.next;
+        }
+        return head;
+    }
 }
