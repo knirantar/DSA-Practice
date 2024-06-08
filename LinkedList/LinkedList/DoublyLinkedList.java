@@ -30,8 +30,8 @@ public class DoublyLinkedList {
         // Node head2 = deleteHead(head);
         // traverseLinkedList(head2);
 
-        Node head2 = deleteTail(head);
-        traverseLinkedList(head2);
+        // Node head2 = deleteTail(head);
+        // traverseLinkedList(head2);
 
         // Node head2 = deleteKthElement(head, 6);
         // traverseLinkedList(head2);
@@ -45,8 +45,8 @@ public class DoublyLinkedList {
         // Node head2 = insertAtKthPosition(head, 30, 8);
         // traverseLinkedList(head2);
 
-        // Node head2 = reverseDoublyLinkedList(head);
-        // traverseLinkedList(head2);
+        Node head2 = reverseDoublyLinkedList(head);
+        traverseLinkedList(head2);
 
         // Node head2 = deleteAllOccurrencesOfKey(head, 1);
         // traverseLinkedList(head2);
