@@ -30,8 +30,8 @@ public class DoublyLinkedList {
         // Node head2 = deleteHead(head);
         // traverseLinkedList(head2);
 
-        // Node head2 = deleteTail(head);
-        // traverseLinkedList(head2);
+        Node head2 = deleteTail(head);
+        traverseLinkedList(head2);
 
         // Node head2 = deleteKthElement(head, 6);
         // traverseLinkedList(head2);
@@ -56,8 +56,8 @@ public class DoublyLinkedList {
         // System.out.println("(" + pair[0] + ", " + pair[1] + ")");
         // }
 
-        Node head2 = removeDuplicatesFromDoublyLinkedList(head);
-        traverseLinkedList(head2);
+        // Node head2 = removeDuplicatesFromDoublyLinkedList(head);
+        // traverseLinkedList(head2);
 
     }
 
@@ -87,9 +87,7 @@ public class DoublyLinkedList {
         while (temp.next != null) {
             temp = temp.next;
         }
-        Node back = temp.prev;
-        back.next = null;
-        temp.prev = null;
+        temp.prev.next = temp.next;
         return head;
     }
 
