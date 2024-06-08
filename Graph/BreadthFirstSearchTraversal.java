@@ -26,7 +26,7 @@ public class BreadthFirstSearchTraversal {
         adj.get(1).add(3);
         adj.get(3).add(1);
 
-        bfs(5, adj);
+        bfs(0, adj);
     }
 
     private static void bfs(int V, List<List<Integer>> adj) {
@@ -34,8 +34,8 @@ public class BreadthFirstSearchTraversal {
         boolean[] vis = new boolean[V];
         Queue<Integer> q = new LinkedList<>();
 
-        q.add(0);
-        vis[0] = true;
+        q.add(V);
+        vis[V] = true;
 
         while (!q.isEmpty()) {
             int node = q.poll();

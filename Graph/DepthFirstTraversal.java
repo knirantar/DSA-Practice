@@ -20,7 +20,7 @@ public class DepthFirstTraversal {
 
         boolean[] vis = new boolean[5];
         List<Integer> ans = new ArrayList<Integer>();
-        List<Integer> res = dfs(47, vis, adj, ans);
+        List<Integer> res = dfs(0, vis, adj, ans);
         for (int i : res) {
             System.out.println(i);
         }
