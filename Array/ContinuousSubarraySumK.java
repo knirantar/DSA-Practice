@@ -25,6 +25,12 @@ public class ContinuousSubarraySumK {
         System.out.println(ans);
     }
 
+    /*
+     * Here the logic applied is remainder and index of particular prefix sum and element is stored
+     * in hashmap so that moment the remainder repeats we can know that some subarray is divisible by k
+     * Difference between index and value of map because condition is that subarray should be at least 2 element long
+     * 
+     */
     private static boolean isContinuousSubarraySumK(int[] a, int k) {
         Map<Integer, Integer> map = new HashMap<>() {
             {
