@@ -651,31 +651,31 @@
 //         return head;
 //     }
 
-//     public static Node mergeTwoSortedLinkedList(Node head1, Node head2) {
-//         Node temp1 = head1;
-//         Node temp2 = head2;
-//         Node dummyNode = new Node(-1, null);
-//         Node temp = dummyNode;
+    public static Node mergeTwoSortedLinkedList(Node head1, Node head2) {
+        Node temp1 = head1;
+        Node temp2 = head2;
+        Node dummyNode = new Node(-1, null);
+        Node temp = dummyNode;
 
-//         while (temp1 != null && temp2 != null) {
-//             if (temp1.data > temp2.data) {
-//                 temp.next = temp2;
-//                 temp = temp2;
-//                 temp2 = temp2.next;
-//             } else {
-//                 temp.next = temp1;
-//                 temp = temp1;
-//                 temp1 = temp1.next;
-//             }
-//         }
-//         if (temp1 != null) {
-//             temp.next = temp1;
-//         } else {
-//             temp.next = temp2;
-//         }
+        while (temp1 != null && temp2 != null) {
+            if (temp1.data > temp2.data) {
+                temp.next = temp2;
+                temp = temp2;
+                temp2 = temp2.next;
+            } else {
+                temp.next = temp1;
+                temp = temp1;
+                temp1 = temp1.next;
+            }
+        }
+        if (temp1 != null) {
+            temp.next = temp1;
+        } else {
+            temp.next = temp2;
+        }
 
-//         return dummyNode.next;
-//     }
+        return dummyNode.next;
+    }
 
 //     public static Node sortLinkedList(Node head) {
 //         Node temp = head;
