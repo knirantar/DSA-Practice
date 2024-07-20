@@ -21,10 +21,6 @@ public class InsertionSort {
                 j--;
             }
             arr[j + 1] = current;
-            for (int k = 0; k < arr.length; k++) {
-                System.out.print(arr[k] + " ");
-            }
-            System.out.println();
         }
 
     }
