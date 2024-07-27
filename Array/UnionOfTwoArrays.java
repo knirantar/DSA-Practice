@@ -7,7 +7,7 @@ import java.util.List;
 public class UnionOfTwoArrays {
     public static void main(String[] args) {
         int[] arr = new int[] { -5, 7, -3, -4, 9, 10, -1, 11 };
-        int[] arr2 = new int[] { -5, 17, -3, -14, 9, 20, -1, 111 };
+        int[] arr2 = new int[] { 17, -3, -14, 9, 20, -1, 111,-5 };
         Arrays.sort(arr);
         Arrays.sort(arr2);
         List<Integer> li = union(arr, arr2);
