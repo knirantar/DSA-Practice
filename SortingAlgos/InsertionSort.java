@@ -20,12 +20,16 @@ public class InsertionSort {
                 arr[j+1] = arr[j];
                 j--;
             }
+<<<<<<< HEAD
             arr[j+1] = current;
 
             for(int r = 0;r<arr.length;r++) {
                 System.out.print(arr[r]+ " ");
             }
             System.out.println();
+=======
+            arr[j + 1] = current;
+>>>>>>> 1fd1a8d9cbd398a9cae27489697c73597177c50e
         }
 
     }
